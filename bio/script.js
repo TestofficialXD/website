@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const startScreen = document.getElementById('start-screen');
   const startText = document.getElementById('start-text');
   const profileName = document.getElementById('profile-name');
-  const profileBio = document.getElementById('profile-bio');
   const visitorCount = document.getElementById('visitor-count');
   const backgroundMusic = document.getElementById('background-music');
   const resultsButtonContainer = document.getElementById('results-button-container');
@@ -160,7 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     typeWriterName();
-    typeWriterBio();
+
+
   });
 
   startScreen.addEventListener('touchstart', (e) => {
@@ -191,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     typeWriterName();
-    typeWriterBio();
   });
 
 
@@ -238,55 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let isBioDeleting = false;
   let bioCursorVisible = true;
 
-  function typeWriterBio() {
-    profileBlock.style.background = `rgba(0, 0, 0, ${opacity})`;
-      profileBlock.style.borderOpacity = opacity;
-      profileBlock.style.borderColor = '';
-      profileBlock.style.backdropFilter = `blur(${10 * opacity}px)`;
-      skillsBlock.style.background = `rgba(0, 0, 0, ${opacity})`;
-      skillsBlock.style.borderOpacity = opacity;
-      skillsBlock.style.borderColor = '';
-      skillsBlock.style.backdropFilter = `blur(${10 * opacity}px)`;
-      profileBlock.style.pointerEvents = 'auto';
-      socialIcons.forEach(icon => {
-        icon.style.pointerEvents = 'auto';
-        icon.style.opacity = '1';
-      });
-      badges.forEach(badge => {
-        badge.style.pointerEvents = 'auto';
-        badge.style.opacity = '1';
-      });
-      profilePicture.style.pointerEvents = 'auto';
-      profilePicture.style.opacity = '1';
-      profileName.style.opacity = '1';
-      profileBio.style.opacity = '1';
-      visitorCount.style.opacity = '1';
-    if (!isBioDeleting && bioIndex < bioMessages[bioMessageIndex].length) {
-      bioText = bioMessages[bioMessageIndex].slice(0, bioIndex + 1);
-      bioIndex++;
-    } else if (isBioDeleting && bioIndex > 0) {
-      bioText = bioMessages[bioMessageIndex].slice(0, bioIndex - 1);
-      bioIndex--;
-    } else if (bioIndex === bioMessages[bioMessageIndex].length) {
-      isBioDeleting = true;
-      setTimeout(typeWriterBio, 2000);
-      return;
-    } else if (bioIndex === 0 && isBioDeleting) {
-      isBioDeleting = false;
-      bioMessageIndex = (bioMessageIndex + 1) % bioMessages.length;
-    }
-    profileBio.textContent = bioText + (bioCursorVisible ? '|' : ' ');
-    if (Math.random() < 0.1) {
-      profileBio.classList.add('glitch');
-      setTimeout(() => profileBio.classList.remove('glitch'), 200);
-    }
-    setTimeout(typeWriterBio, isBioDeleting ? 75 : 150);
-  }
-
-  setInterval(() => {
-    bioCursorVisible = !bioCursorVisible;
-    profileBio.textContent = bioText + (bioCursorVisible ? '|' : ' ');
-  }, 500);
+ 
 
 
   let currentAudio = backgroundMusic;
@@ -594,5 +545,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   typeWriterStart();
-
 });
