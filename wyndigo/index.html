@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>serversided.win</title>
+    <style>
+    /* hello code readers, some of this code i got from css and html code generators like: https://webcode.tools and some of the code i got from tutorials because idk how to code in css n shit but im learning. */
+
+
+    @keyframes buttonanim 
+    {
+        0%  
+        {
+             transform: scale(1); 
+        }
+        25%  
+        { 
+            transform: scale(0.95);
+        }
+        50%  
+        { 
+            transform: scale(0.98); 
+        }
+        75%  
+        { 
+            transform: scale(0.93); 
+        }
+        100% 
+        { 
+            transform: scale(1); 
+        }
+    }
+
+
+        html, body 
+        {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        body 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .thegoodstuff 
+        {
+            height: auto;
+            padding: 40px 60px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            position: relative;
+        }
+        
+        .review-title 
+        { 
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        } 
+        
+        .review-lines p 
+        { 
+            color: #ffffff;
+            margin: 4px 0;
+            font-size: 12px;
+            opacity: 1;
+        }
+
+        
+
+        .title
+        {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .title h1 
+        {
+            margin: 0;
+            margin-right: 16px;
+            font-size: 36px;
+            animation: bounceee 2s ease 0s 1 normal forwards;
+            z-index: 10;
+        }
+
+        .buttons 
+        {
+            display: flex;
+            gap: 20px;
+            z-index: 10;
+        }
+
+        .buttons a {
+            text-decoration: none;
+        }
+
+        .buttons button 
+        {
+            width: 160px;
+            height: 50px;
+            background-color: #ff0000;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+            animation: buttonanim 5s ease-in-out infinite;
+            z-index: 10;
+        }
+
+        .buttons button:hover 
+        {
+            background-color: #350000;
+        }
+
+        .footer 
+        {
+            position: fixed;
+            bottom: 10px;
+            font-size: 11px;
+            opacity: 0.6;
+            z-index: 10;
+        }
+
+        #background 
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "bg">
+        <video autoplay muted loop id="background">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="thegoodstuff"> 
+
+        <div class="title">
+            <h1>Wyndigo Mod Menu</h1>
+        </div>
+
+        <div class="buttons">
+            <a href="https://discord.com/invite/v6VvmGNd5n">
+                <button>Download</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="reviewbox"> 
+        <div class="review-title">50+ positive reviews from real users</div>
+         <div class="review-lines"> 
+            <p>“+rep so very good menu”</p> 
+            <p>“+rep best menu ive seen rn”</p> 
+            <p>“+rep the menu is super good haven't got banned even when I rage cheat”</p> 
+            <p>“Wyndigo mod menu got me bitches”</p> 
+            <p>“Great menu, Insane features, Nice UI. 10/10. +rep”</p> 
+            <p>"lowk over powerd and you should get it. it should be lowk paid ngl"</p>
+            <p>"the best mod menu without a virus to ever exist 10/10"</p>
+            <p>etc...</p> 
+        </div>
+
+    <div class="footer">made by @testofficialxd</div>
+</body>
+</html>
