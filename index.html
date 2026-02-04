@@ -4,6 +4,108 @@
     <meta charset="UTF-8">
     <title>serversided.win</title>
     <style>
+
+    @keyframes buttonanim {
+        0%   { transform: scale(1); }
+        25%  { transform: scale(0.95); }
+        50%  { transform: scale(0.98); }
+        75%  { transform: scale(0.93); }
+        100% { transform: scale(1); }
+    }
+
+    @keyframes bounce {
+	    0% {
+	    	animation-timing-function: ease-in;
+	    	opacity: 1;
+	    	transform: translateY(-500px);
+	    }
+
+	    24% {
+	    	opacity: 1;
+	    }
+
+	    40% {
+	    	animation-timing-function: ease-in;
+	    	transform: translateY(-100px);
+	    }
+
+	    65% {
+	    	animation-timing-function: ease-in;
+	    	transform: translateY(-50px);
+	    }
+
+	    82% {
+	    	animation-timing-function: ease-in;
+	    	transform: translateY(-10px);
+	    }
+
+	    93% {
+	    	animation-timing-function: ease-in;
+	    	transform: translateY(-5px);
+	    }
+
+	    25%,
+	    55%,
+	    75%,
+	    87% {
+	    	animation-timing-function: ease-out;
+	    	transform: translateY(0px);
+	    }
+
+	    100% {
+	    	animation-timing-function: ease-out;
+	    	opacity: 1;
+	    	transform: translateY(0px);
+	    }
+    }
+
+
+    @keyframes bounce2 {
+	    0% {
+	    	animation-timing-function: ease-in;
+	    	opacity: 1;
+	    	transform: translateY(500px);
+	    }
+
+	    24% {
+	    	opacity: 1;
+	    }
+
+	    40% {
+	    	animation-timing-function: ease-in;
+	    	transform: translateY(100px);
+	    }
+
+	    65% {
+	    	animation-timing-function: ease-in;
+	    	transform: translateY(50px);
+	    }
+
+	    82% {
+	    	animation-timing-function: ease-in;
+	    	transform: translateY(10px);
+	    }
+
+	    93% {
+	    	animation-timing-function: ease-in;
+	    	transform: translateY(5px);
+	    }
+
+	    25%,
+	    55%,
+	    75%,
+	    87% {
+	    	animation-timing-function: ease-out;
+	    	transform: translateY(0px);
+	    }
+
+	    100% {
+	    	animation-timing-function: ease-out;
+	    	opacity: 1;
+	    	transform: translateY(0px);
+	    }
+    }
+
         html, body {
             margin: 0;
             padding: 0;
@@ -31,11 +133,13 @@
             margin: 0;
             margin-right: 15px;
             font-size: 36px;
+            animation: bounce 2s ease 0s 1 normal forwards;
         }
 
         .title img {
             width: 48px;
             height: 48px;
+            animation: bounce 2s ease 0s 1 normal forwards;
         }
 
         .buttons {
@@ -56,6 +160,8 @@
             font-size: 16px;
             cursor: pointer;
             border-radius: 6px;
+            animation: buttonanim 5s ease-in-out infinite;
+
         }
 
         .buttons button:hover {
@@ -74,7 +180,7 @@
     <div class="container">
         <div class="title">
             <h1>serversided.win</h1>
-            <img src="cat.gif" alt="gif">
+            <img src="pic.png" alt="png">
         </div>
 
         <div class="buttons">
@@ -82,7 +188,7 @@
                 <button>Wyndigo Mod Menu</button>
             </a>
             <a href="https://serversided.win/drive">
-                <button>Public Storage</button>
+                <button>Online Drive</button>
             </a>
         </div>
     </div>
@@ -90,4 +196,3 @@
     <div class="footer">made by @testofficialxd</div>
 </body>
 </html>
-
