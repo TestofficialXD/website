@@ -230,8 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const bioMessages = [
-    "I am test, I have been coding in C# for 2 years. Owner of all Wyndigo services",
-    "\"Hello, World!\""
+    "I am test, I have been coding in C# for 2 years. Owner of all Wyndigo services"
   ];
   let bioText = '';
   let bioIndex = 0;
@@ -595,4 +594,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   typeWriterStart();
+
 });
