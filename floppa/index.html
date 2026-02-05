@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>serversided.win</title>
+    <style>
+    /* hello code readers, some of this code i got from css and html code generators like: https://webcode.tools and some of the code i got from tutorials because idk how to code in css n shit but im learning. */
+
+    
+        @keyframes buttonanim 
+        {
+            0%  
+            {
+                 transform: scale(1); 
+            }
+            25%  
+            { 
+                transform: scale(0.91);
+            }
+            50%  
+            { 
+                transform: scale(1); 
+            }
+            75%  
+            { 
+                transform: scale(0.91); 
+            }
+            100% 
+            { 
+                transform: scale(1); 
+            }
+        }
+
+
+@keyframes dvdbelike {
+    0% {
+        transform: translate(0);
+    }
+
+    10% {
+        transform: translate(-50px, -50px);
+    }
+
+    20% {
+        transform: translate(50px, -50px);
+    }
+
+    30% {
+        transform: translate(-50px, 50px);
+    }
+
+    40% {
+        transform: translate(50px, 50px);
+    }
+
+    50% {
+        transform: translate(-50px, -50px);
+    }
+
+    60% {
+        transform: translate(50px, -50px);
+    }
+
+    70% {
+        transform: translate(-50px, 50px);
+    }
+
+    80% {
+        transform: translate(-50px, -50px);
+    }
+
+    90% {
+        transform: translate(50px, -50px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+
+
+        .thegoodstuff 
+        {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+    
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .floppa
+        {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            animation: buttonanim 5s ease-in-out infinite;
+            visibility: hidden;
+            z-index: 10;
+        }
+
+        .floppa
+        {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            z-index: 10;
+        }
+
+        .gifholderandthingsofthatnaturemaboihsdaadadada
+        {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 50;
+            height: 100;
+            display: flex;
+            pointer-events: none;
+            animation: dvdbelike 5s ease-in-out infinite;
+        }
+
+        .gifig
+        {
+            animation: dvdbelike 5s ease-in-out infinite;
+        }
+
+        .gifs img
+        {
+            width: 50;
+            height: 50;
+            object-fit: 50;
+        }
+   
+        #background 
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.3;
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+    <body>
+    <audio id="background-music" loop autoplay muted>
+        <source src="floppa.mp3" type="audio/mp3">
+    </audio>
+    <audio id="meow">
+        <source src="meow.mp3" type="audio/mp3">
+    </audio>
+    <div class="thegoodstuff">
+
+        <!--<div class="gifholderandthingsofthatnaturemaboihsdaadadada">
+            <img src = "a66.gif">
+            <img src = "floppa-pet-gif.gif">
+            <img src = "big-floppa-floppa.gif">
+            <img src = "floppayawn.gif">
+        </div>
+         -->
+
+        <div class = "bg">
+            <video autoplay muted loop id="background">
+                <source src="background.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="floppa" id="floppa">
+            <img src="floppa-right.png" alt="">
+            <h1 id="s" ></h1>
+        </div>
+        <div class="overlay" id="overlay">
+            <h1>Click To Start!</h1>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const bgmusic = document.getElementById("background-music");
+    const meow = document.getElementById("meow");
+    const floppa = document.getElementById("floppa");
+    const overlay = document.getElementById("overlay");
+    const bg = document.getElementById("background");
+    let score = 0;
+    
+    window.addEventListener("click", playthjestuff);
+    function meoww()
+    {
+        meow.play();
+
+        score++;
+        document.getElementById("s").textContent = score.toString();
+    }
+
+    function playthjestuff()
+    {
+        bgmusic.muted = false;
+        bgmusic.volume = 0.8;
+        bgmusic.play();
+        floppa.style.visibility = "visible";
+        bg.style.visibility = "visible";
+        overlay.style.visibility = "hidden";
+        window.removeEventListener("click", playthjestuff);
+        window.addEventListener("click", meoww);
+    }
+    window.addEventListener("click", playthjestuff);
+
+    
+
+</script>
+</html>
