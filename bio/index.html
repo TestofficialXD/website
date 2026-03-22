@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -706,9 +707,43 @@
             }
 
             #profile-name {
-                font-size: 24px;
-                letter-spacing: 2px;
-            }
+    font-family: 'Angel Wish', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#profile-bioo {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 520px;
+}
+
+.bio-section {
+    margin-top: 8px;
+}
+
+.bio-title {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 4px;
+}
+
+.bio-value {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+}
 
             .badge-group {
                 justify-content: center;
@@ -894,7 +929,21 @@
                             </div>
                         </div>
                     </div>
-                    <div id="profile-bioo">I am test, C# - 2yrs, C++ - like 2 weeks lmao. Owner and Creator @ Wyndigo services 1.2k Members, Owner and Creator @ Kernel Menu 20k Members, Admin @ AA Services 20k Members.</div>
+                    <div id="profile-bioo">
+    <div class="bio-section">
+        <div class="bio-title"><strong>About</strong></div>
+        <div class="bio-value">C# developer with 2 years experience. Currently working with C++.<br></div>
+    </div>
+
+    <div class="bio-section">
+        <div class="bio-title"><strong><br>Projects</strong></div>
+        <div class="bio-value">
+            Wyndigo Services (1.2K members)<br>
+            Kernel Menu (20K members)<br>
+            AA Services (Admin, 20K members)
+        </div>
+    </div>
+</div>
                 </div>
             </div>
 
@@ -960,6 +1009,7 @@
 
 
     <script src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"c7c2b2cb06ca4c76a134aa9f1d7fbd76","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
 
